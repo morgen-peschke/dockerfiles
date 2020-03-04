@@ -50,3 +50,17 @@ Options
 | -h    | --help       |         | Display help text                                                    |
 
 EOF
+
+title Minimized Failure Case
+docker run --rm -i morgenpeschke/tty-markdown <<EOF
+| a |
+|---|
+|   |
+EOF
+
+title Minimized Success Case
+docker run --rm -i morgenpeschke/tty-markdown <<EOF
+| a      |
+|--------|
+| &nbsp; |
+EOF
