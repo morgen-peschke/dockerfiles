@@ -1,6 +1,4 @@
-FROM ubuntu:latest
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends miller \
-    && rm -rf /var/lib/apt/lists/*
-
-ENTRYPOINT ["/usr/bin/mlr"]
+FROM alpine:latest
+RUN wget https://github.com/johnkerl/miller/releases/download/v5.8.0/mlr.linux.x86_64 -O /mlr && \
+    chmod 700 /mlr
+ENTRYPOINT ["/mlr"]
