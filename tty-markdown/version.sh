@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-SCRIPT_VERSION='0.0.1'
+SCRIPT_VERSION='2'
 LIB_VERSION=$(
     gem query --local -n tty-markdown -a |
         cut -d'(' -f2 |
@@ -7,4 +7,4 @@ LIB_VERSION=$(
         tr -d '\n'
            )
 
-echo "${SCRIPT_VERSION}-ttyMarkdown${LIB_VERSION}"
+echo "${LIB_VERSION}.${SCRIPT_VERSION}"
